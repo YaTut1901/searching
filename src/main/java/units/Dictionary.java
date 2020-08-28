@@ -22,6 +22,10 @@ public class Dictionary {
         return true;
     }
 
+    public Integer firstOccasion(String word) {
+        return dictionary.get(word).get(0);
+    }
+
     public boolean addWord(String word, Integer position) {
         numerator.put(position, word);
         if (dictionary.containsKey(word)) {
@@ -32,7 +36,7 @@ public class Dictionary {
         return true;
     }
 
-    public List<Integer> getWordPosition(String word) {
+    public List<Integer> getWordPositions(String word) {
         return dictionary.get(word);
     }
 

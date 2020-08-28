@@ -9,6 +9,7 @@ public class App {
         Parser parser = new Parser();
         String[] words = parser.parse(reader.read("src/test/resources/test_1.txt"));
         searcher.getDictionary().addAll(words);
-        System.out.println(searcher.search("door", "3", "painted", "0", "porthole"));
+        System.out.println(searcher.getDictionary().toString());
+        System.out.println(searcher.search("porthole", "3", "a", "1", "green"));
     }
 }
